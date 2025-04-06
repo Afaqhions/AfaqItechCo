@@ -1,0 +1,58 @@
+{% include "header.html" %}
+
+    <!--Header Part of Main--> 
+    <header>
+        <div class="head-container">
+            <h1 class="head-h"><p>{{ request.user.username }}</p> Welcome to SARA AI</h1>
+            <p class="head-p">Experience the the different Ai Assistants for you which makes your life easy.</p>
+            <a class="luxury-button" href="discover">Discover More</a>
+        </div>
+    </header>  
+    <!--Cards od Ai's-->
+    <div class="cards-container">
+        <h1 class="card-h">Explore AI Categories</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="./static/ai image.jpg" alt="Studies AI">
+                <h2>Studies</h2>
+                <p>AI enhances coding by suggesting, debugging, and optimizing code. Tools like GitHub Copilot automate repetitive tasks, improve security, and streamline development. AI-driven testing accelerates software deployment, while predictive models detect inefficiencies. As AI evolves, it will make coding more accessible, boosting productivity for both beginners and experienced developers.</p> 
+            {% if request.user.is_authenticated %}
+                <a href="ai-app">Use</a>
+            {% else %}
+                <input type="hidden">
+            {% endif %}
+            </div>
+            <div class="card">
+                <img src="./static/ai image.jpg" alt="Health AI">
+                <h2>Health</h2>
+                <p>AI revolutionizes healthcare through early disease detection, personalized treatments, and robotic surgeries. Machine learning analyzes medical data for diagnosis, while AI chatbots assist patients. Wearable devices monitor health in real time. Despite concerns over data privacy and biases, AI enhances patient care, reduces workload, and improves medical decision-making globally.</p>
+            {% if request.user.is_authenticated %}
+                <a href="ai-app">Use</a>
+            {% else %}
+                <input type="hidden">
+            {% endif %}
+            </div>
+            <div class="card">
+                <img src="./static/ai image.jpg" alt="General Chat AI">
+                <h2>General Chat</h2>
+                <p>AI chatbots automate responses, answer queries, and improve communication across industries.Hepls user to solve their daily life problems. In workplaces, they assist with scheduling and documentation. Social AI engages users in brainstorming and problem-solving. AI chatbots support mental health by offering guidance. Ethical improvements are needed to ensure accurate, unbiased, and meaningful AI-human interactions globally.</p>
+            {% if request.user.is_authenticated %}
+                <a href="ai-app">Use</a>
+            {% else %}
+                <input type="hidden">
+            {% endif %}
+            </div>
+            <div class="card">
+                <img src="./static/ai image.jpg" alt="Coding AI">
+                <h2>Coding</h2>
+                <p>AI personalizes education through adaptive learning platforms, automated grading, and intelligent tutoring. It analyzes student performance, providing customized lessons and real-time feedback. AI chatbots assist with queries, while VR/AR enhance interactive learning. Ethical concerns persist, but AI-driven education improves accessibility, engagement, and efficiency in learning environments worldwide.</p>
+            {% if request.user.is_authenticated %}
+                <a href="ai-app">Use</a>
+            {% else %}
+                <input type="hidden">
+            {% endif %}
+            </div>
+        </div>
+    </div>
+     <!--Footer  -->
+    {% include "footer.html" %}
